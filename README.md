@@ -44,8 +44,38 @@ Regarding the country selection, I have excluded Uzbekistan, Thailand, Jordan, S
 To ensure the consistency of data for the modelling, a small number of missing observations across several variables were addressed using linear interpolation within each country over time. Interpolation works by inferring the missing values through patterns or trends in the data.
 
 ## IV. Empirical Results
+### 4.1. FDI/ GDP Analysis
+<img width="1294" height="698" alt="image" src="https://github.com/user-attachments/assets/bdf6ec06-6434-4e3e-b41b-fb03e4eeb01d" />
+**West Asia:**
 
-### 4.1. Correlation Matrix
+- **Iran**’s persistently low values (Avg 0.77%) are consistent with political risk and restricted capital mobility, limiting sustained foreign investment ([Rafat and Farahani's study, 2019](https://ier.ut.ac.ir/article_69107_b689d1fd0cdd4fe3f492bdb33e7b3db2.pdf?utm_source=chatgpt.com)).
+
+- **Saudi Arabia**’s low FDI/GDP (Avg 0.81%) suggests that growth is driven primarily by oil revenues and domestic capital, making FDI relatively less important as a share of GDP ([Mahmood and Alkhateeb's study, 2018](https://www.researchgate.net/publication/327732262_Foreign_Direct_Investment_Domestic_Investment_and_Oil_Price_Nexus_in_Saudi_Arabia))
+
+**Central Asia:**
+
+- **Tajikistan**’s spikes in the late 2000s (Avg ~9%, 2004-2008) reflects in the large, project-based investments such as hydropower and mining ([World Bank's report, 2007](https://documents1.worldbank.org/curated/en/437331468341061852/pdf/39958.pdf)). Its small GDP base (Avg 3.2 billion USD, 2004-2008) also should be considered for this high ratio.
+
+**South Asia:**
+
+- **Bangladesh** (Avg 0.8%), **Nepal** (Avg 0.2%), and **Pakistan** (Avg 0.9%) maintain consistently low FDI/GDP, with minimal volatility.
+
+- **India** shows a steady but modest increase in FDI/GDP throughout the years (1% – 3%). Asessing its large-scale GDP, it could be indicated that India economic growth has not been heavily dependent on FDI.
+
+**East Asia:**
+
+- **Malaysia** (Avg 3%) and **Philippines** (Avg 1.7%) exhibit medium and relatively stable levels due to its stable politics and affairs.
+
+- **Indonesia** shows negative figures in the early 2000s (Avg -1.2%, 2000-2003), influenced by the Asian Financial Crisis and the unstable politic affair (Fall of Suharto
+ in 1998). After the period, Indonesia started to gradually attract FDI (Avg 1.8%, 2004-2023)
+
+- **China** shows moderate and stable FDI/GDP ratio until 2013 (Avg 3.6%, 2000-2013). This aligns well with WTO accesion in 2001 and its encouraging policy on FDI attraction and exporting strategies. The FDI mostly flew into electronics, apparel, and assembly manufacturing, mostly set in Special Economic Zones ([Zeng's study, 2012](https://www.lincolninst.edu/app/uploads/legacy-files/pubfiles/2261_1600_Zeng_WP13DZ1.pdf)). After 2013, China gradually relied less on inward FDi and became a major outward investors ([UNCTAD, 2022](https://unctad.org/publication/world-investment-report-2022)). The denominator (GDP growth) effect also should be considered in this period as its GDP had grown enormously in the 2010s.
+
+- **Cambodia** stands out as one of the countries with the highest FDI/ GDP ratios in the sample (Avg 7.6%). China is a major source of its FDI, accounting for nearly 50 percent of Cambodia’s total FDI inflows. In addition, Cambodia has established SEZs, modeled in part on China’s experience, to further attract FDI ([Asean Business Partners's article](https://bizasean.com/foreign-direct-investment-cambodia)).
+
+- **Vietnam** is also in the top countries for the most stable FDI/GDP (Avg 4.8%). Vietnam's ability to attract consistent FDI is largely due to its stable socio-political environment and consistent pro-investment government policies that foster high investor confidence. Additionally, active participation in numerous free trade agreements like the CPTPP and RCEP has embedded the nation into global production networks. Notably, during 2007-2009, Vietnam saw the highest ratio (Avg 8.5%, 2007-2009), following its accession to the World Trade Organization in January 2007, which boosted investor confidence and market access. ([NUS's research](https://research.nus.edu.sg/eai/wp-content/uploads/2017/11/Vol1No2_LeThiThuy.pdf)).
+
+### 4.2. Correlation Matrix
 <img src="https://github.com/user-attachments/assets/14a02910-a787-46a2-b7c5-b73af6471979" width="70%">
 
 - Log GDP per capita has a moderate positive correlation with log FDI (0.31) => Support the hypothesis that higher FDI inflows are generally associated with higher GDP.
@@ -53,7 +83,7 @@ To ensure the consistency of data for the modelling, a small number of missing o
 
 Overall, the matrix does not indicate severe multicollinearity among the main regressors. The regression analysis will formally test these relationships in the next part, using within-country variation over time.
 
-### 4.2. Regression Model Results
+### 4.3. Regression Model Results
 <img width="905" height="593" alt="image" src="https://github.com/user-attachments/assets/52ccf54a-5505-4e79-a23d-9fdf8a15c927" />
 
 **(1)** Pooled OLS
@@ -78,23 +108,23 @@ The RE model assumes country-specific effects are uncorrelated with the explanat
 
 Compared with my earlier academic work, the pooled OLS, Fixed Effects, and Random Effects models all showed FDI as positive and statistically significant. However, the extended model in this project introduces additional controls for infrastructure (electricity access), institutional quality (government effectiveness), and human capital (tertiary school enrollment). Furthermore, once both country and time effects are controlled for in the Two-Way Fixed Effects model, the coefficient of FDI becomes statistically insignificant. This suggests that after accounting for more factors across countries and global time shocks, FDI does not show a strong impact on GDP per capita.
 
-### 4.3. Test Results
+### 4.4. Test Results
 
-#### 4.3.1. Hausman Test
+#### 4.4.1. Hausman Test
 <img width="304" height="72" alt="image" src="https://github.com/user-attachments/assets/9fde9065-ddbf-4b49-966d-a3370cbc72b9" />
 
 Since the p-value is below the 5% significance level, the null hypothesis that the unobserved country-specific effects are likely correlated with the explanatory variables is rejected. Therefore, the Random Effects estimator would be biased and inconsistent.
 
 Based on this result, **the Fixed Effects models are preferred**, as they provide more reliable estimates for this panel data setting.
 
-#### 4.3.2. F-test For Time Effects
+#### 4.4.2. F-test For Time Effects
 <img width="279" height="74" alt="image" src="https://github.com/user-attachments/assets/ad7d5a8b-c166-455f-96ab-8c8c220b5fdd" />
 
 Since the p-value is well below the 5% significance level, the null hypothesis that all time fixed effects are jointly equal to zero is rejected. This means that year-specific effects are statistically significant and should be included in the model.
 
 Based on the two test results above, **the Two-Way Fixed Effects model (2FE) is the most approriate model** for this panel dataset.
 
-#### 4.3.4. Dumitrescu-Hurlin Granger Non-causality Test
+#### 4.4.3. Dumitrescu-Hurlin Granger Non-causality Test
 <img width="587" height="399" alt="image" src="https://github.com/user-attachments/assets/5d473334-405b-4992-8285-a2f7f514397f" />
 
 **(a)** reported the null hypothesis that FDI does not Granger-cause economic growth. The results show that the null hypothesis is rejected at lag 1 and lag 3, as both the Z-bar and Z-bar tilde statistics are statistically significant at the 5% level. This indicates that past values of FDI contain useful information for predicting GDP per capita in the sample countries. In contrast, the test results at lag 2 are not statistically significant, meaning that the predictive relationship is not consistently present at every lag length. Overall, the findings suggest that FDI has short-run and medium-run predictive effects on economic growth, although the strength of this relationship may vary across different lag structures.
