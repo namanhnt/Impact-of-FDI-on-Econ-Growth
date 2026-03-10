@@ -76,7 +76,7 @@ The RE model assumes country-specific effects are uncorrelated with the explanat
 
 <img width="596" height="508" alt="image" src="https://github.com/user-attachments/assets/babe0cce-b99a-49a4-ae77-c5d18f3554ac" />
 
-Compared with my earlier academic work, the pooled OLS, Fixed Effects, and Random Effects models all showed FDI as positive and statistically significant. However, the extended model in this project introduces additional controls for infrastructure (electricity access), institutional quality (government effectiveness), and human capital (tertiary school enrollment). Once both country and time effects are controlled for in the Two-Way Fixed Effects model, the coefficient of FDI becomes statistically insignificant. This suggests that after accounting for more factors across countries and global time shocks, FDI does not show a strong impact on GDP per capita.
+Compared with my earlier academic work, the pooled OLS, Fixed Effects, and Random Effects models all showed FDI as positive and statistically significant. However, the extended model in this project introduces additional controls for infrastructure (electricity access), institutional quality (government effectiveness), and human capital (tertiary school enrollment). Furthermore, once both country and time effects are controlled for in the Two-Way Fixed Effects model, the coefficient of FDI becomes statistically insignificant. This suggests that after accounting for more factors across countries and global time shocks, FDI does not show a strong impact on GDP per capita.
 
 ### 4.3. Test Results
 
