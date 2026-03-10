@@ -30,6 +30,7 @@ $$
 - *t denotes year*
 - *β₀ denotes the intercept term*  
 - *εᵢₜ denotes the error term, varying across countries and time*
+- GDP, GCF, Labour, and FDI are expressed in logarithmic form for heteroskedasticity reduction
 
 Four panel regression models are used: Pooled OLS, One-way Fixed Effects, Two-way Fixed Effects, and Random Effects models. The Hausman test and F-test for time effects are applied to determine the most appropriate model. In addition, the Dumitrescu–Hurlin panel Granger causality test is used to explore the direction of causality between FDI and economic growth across countries.
 
