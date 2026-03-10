@@ -46,6 +46,7 @@ To ensure the consistency of data for the modelling, a small number of missing o
 ## IV. Empirical Results
 ### 4.1. FDI/ GDP Analysis
 <img width="1294" height="698" alt="image" src="https://github.com/user-attachments/assets/bdf6ec06-6434-4e3e-b41b-fb03e4eeb01d" />
+
 **West Asia:**
 
 - **Iran**’s persistently low values (Avg 0.77%) are consistent with political risk and restricted capital mobility, limiting sustained foreign investment ([Rafat and Farahani's study, 2019](https://ier.ut.ac.ir/article_69107_b689d1fd0cdd4fe3f492bdb33e7b3db2.pdf?utm_source=chatgpt.com)).
