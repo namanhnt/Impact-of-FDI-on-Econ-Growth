@@ -72,7 +72,7 @@ The two-way FE model additionally controls for time effects shared across countr
 
 The RE model assumes country-specific effects are uncorrelated with the explanatory variables. Under this model, FDI becomes positive and significant again, while gross capital formation, electricity access, and school enrollment also show significant positive relationships with GDP per capita.
 
-***Comparison with my former work***
+***Comparison with my former models in the dissertation***
 
 <img width="596" height="508" alt="image" src="https://github.com/user-attachments/assets/babe0cce-b99a-49a4-ae77-c5d18f3554ac" />
 
